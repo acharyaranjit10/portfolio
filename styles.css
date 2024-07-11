@@ -104,7 +104,10 @@ width: 100%;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
-
+#typing-text{
+  height: 3rem;
+  /* max-width: 80vw; */
+}
 @media (max-width: 800px) {
     .toggle-button {
         display: flex;
@@ -412,6 +415,15 @@ textarea {
   top: 50px;
   left: -13px;
  
+}
+#my-mail{
+  text-decoration: none;
+  color: #a9cdee;
+  transition: 0.5s ease;
+}
+#my-mail:hover{
+  scale: 1.05;
+  color: #709fc9;
 }
 
 form {

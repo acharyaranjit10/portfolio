@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // HAMBURGER START
+    // HAMBURGER START***************************
     const toggleButton = document.querySelector('.toggle-button');
     const navbarLinks = document.querySelector('.navbar-links');
 
     toggleButton.addEventListener('click', () => {
         navbarLinks.classList.toggle('active');
     });
-    // HAMBURGER ENDS
+    // HAMBURGER ENDS***************************
 
-    // HOME TEXT ANIMATION STARTS
+    // HOME TEXT ANIMATION STARTS************************
     const paragraphs = [
         "A MERN Stack Developer,",
         "A Full Stack WebDeveloper,",
-        "An IT Aspirant."
+        "An avid learner."
         
     ];
     const typingTextElement = document.getElementById('typing-text');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             charIndex++;
             setTimeout(type, 100); // Adjust typing speed here
         } else {
-            setTimeout(erase, 2000); // Hold the text for a while before erasing
+            setTimeout(erase, 1500); // Hold the text for a while before erasing
         }
     }
 
@@ -33,20 +33,45 @@ document.addEventListener('DOMContentLoaded', () => {
         if (charIndex > 0) {
             typingTextElement.textContent = paragraphs[currentIndex].substring(0, charIndex - 1);
             charIndex--;
-            setTimeout(erase, 50); // Adjust backspace speed here
+            setTimeout(erase, 40); // Adjust backspace speed here
         } else {
             currentIndex = (currentIndex + 1) % paragraphs.length;
-            setTimeout(type, 400); // Delay before starting to type the next paragraph
+            setTimeout(type, 200); // Delay before starting to type the next paragraph
         }
     }
     
     type(); // Start the typing effect
-    // HOME TEXT ANIMATION ENDS
+    // HOME TEXT ANIMATION ENDS*********************************************
 
 
-    // SCROLL ADJUST START
+    // SCROLL ADJUST START*******************************
 
 
-    // SCROLL ADJUST ENDS
+// Calculate the height of the fixed navbar
+const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+// Smooth scroll function
+function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop - navbarHeight,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Add event listeners to navbar links
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        scrollToSection(targetId);
+    });
+});
+
+    // SCROLL ADJUST ENDS*********************************
+
+
     
 });
