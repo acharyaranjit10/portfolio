@@ -577,7 +577,14 @@ textarea.input {
 #git{
   background: linear-gradient(45deg, rgb(43, 42, 42),black );
 }
-
+#cv img{
+   height: 110%;
+   width: 110%;
+   position: relative;
+   right: 2px;
+   bottom: 2px;
+   
+}
 
 .social-icons a:hover {
   transform: scale(1.05);
