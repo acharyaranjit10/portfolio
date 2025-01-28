@@ -198,22 +198,22 @@ width: 100%;
     min-height: 80vh;
     text-align: center;
     color: #a9cdee;
-}
-.skills h1{
-  color: #11a372;
+  }
+  .skills h1{
+    color: #11a372;
     font-size: 2rem;
     margin: 1rem 0;
-}
-.lang{
+  }
+  .lang{
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 40vh;
     max-width: 80vw;
-}
-
-.skill{
+  }
+  
+  .skill{
     height: 150px;
     width: 150px;
     margin: 2rem 1rem;
@@ -226,8 +226,8 @@ width: 100%;
     border: 1px solid transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
-    
-}
+  overflow: auto;
+  }
 .skill :hover{
   cursor: pointer;
     border:1px solid transparent;
